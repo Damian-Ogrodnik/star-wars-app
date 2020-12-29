@@ -1,4 +1,4 @@
-import Utils from '../../services/Utils';
+import { parseRequestURL } from '../../core/helpers';
 
 const getPost = async (id) => {
   const options = {
@@ -22,7 +22,7 @@ const getPost = async (id) => {
 
 const PostShow = {
   render: async () => {
-    const request = Utils.parseRequestURL();
+    const request = parseRequestURL();
     const post = await getPost(request.id);
 
     return /* html */ `

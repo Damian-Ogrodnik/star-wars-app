@@ -1,8 +1,8 @@
-import Utils from '../../../services/Utils';
+import { parseRequestURL } from '../../../core/helpers';
 
 const Planets = {
   render: async () => {
-    const request = Utils.parseRequestURL();
+    const request = parseRequestURL();
 
     return /* html */ `
             <section class="section">
