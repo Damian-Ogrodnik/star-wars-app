@@ -24,3 +24,9 @@ export const routesWithComponents = {
   [routes.planets]: Planets,
   [routes.planet]: Planets,
 };
+
+export const BASE_URL = 'https://swapi.dev/api/';
+
+export const httpMethod = {
+  GET: 'GET',
+};

@@ -1,4 +1,4 @@
-import { parseRequestURL } from '../../../core/helpers';
+import { parseRequestURL } from '../../../common/helpers';
 
 const Starships = {
   render: async () => {

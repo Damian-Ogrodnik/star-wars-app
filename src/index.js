@@ -6,8 +6,8 @@ import Error404 from './views/pages/Error404';
 import Navbar from './views/components/Navbar';
 
 
-import { parseRequestURL } from './core/helpers';
-import { routesWithComponents } from './core/config/variables';
+import { parseRequestURL } from './common/helpers';
+import { routesWithComponents } from './common/config/variables';
 
 const router = async () => {
   const body = null || document.getElementById('navigation');
