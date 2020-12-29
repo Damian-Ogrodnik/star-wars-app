@@ -1,4 +1,4 @@
-import { httpMethod } from '../config/variables';
+import { httpMethod } from '../config/apiConfig';
 
 export class HttpService {
   constructor(baseUrl) {

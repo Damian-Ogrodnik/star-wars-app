@@ -1,17 +1,14 @@
 import 'regenerator-runtime/runtime';
 import './styles.scss';
 
-import Error404 from './views/pages/Error404';
-
+import { Error404 } from './views/components/Error/Error404';
 import Navbar from './views/components/Navbar';
-
-
 import { parseRequestURL } from './common/helpers';
 import { routesWithComponents } from './common/config/variables';
 
 const router = async () => {
   const body = null || document.getElementById('navigation');
-  const content = null || document.getElementById('page_container');
+  const content = null || document.getElementById('root');
 
   body.innerHTML = await Navbar.render();
   await Navbar.after_render();

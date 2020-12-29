@@ -1,12 +1,18 @@
-import { parseRequestURL } from '../../../common/helpers';
+import { swapiService } from '../../../core/rootService';
+import { ErrorCommon } from '../../components/Error/ErrorCommon';
 
 const Films = {
   render: async () => {
-    const request = parseRequestURL();
+    const fetchedFilms = await swapiService.getFilms();
 
-    return /* html */ `
+    if (fetchedFilms.error || !fetchedFilms) return ErrorCommon.render(fetchedFilms.error);
+
+    const films = fetchedFilms.map((filmData) => `<h1>${filmData.title}</h1>`).join(' ');
+
+    return `
             <section class="section">
-                <h1> Post Id : ${request.id}</h1>
+                <h1> Films</h1>
+                ${films}
             </section>
         `;
   },

@@ -16,17 +16,11 @@ export const routes = {
 
 export const routesWithComponents = {
   [routes.films]: Films,
-  [routes.singleFilm]: Films,
+  [routes.singleFilm]: People,
   [routes.people]: People,
   [routes.person]: People,
   [routes.starships]: Starships,
   [routes.starship]: Starships,
   [routes.planets]: Planets,
   [routes.planet]: Planets,
-};
-
-export const BASE_URL = 'https://swapi.dev/api/';
-
-export const httpMethod = {
-  GET: 'GET',
 };
