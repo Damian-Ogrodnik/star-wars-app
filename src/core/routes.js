@@ -3,6 +3,7 @@ import {routes} from '../common/config/variables';
 import {swapiService} from './rootService';
 
 import Films from '../views/pages/films';
+import {Film} from '../views/pages/film';
 import People from '../views/pages/people';
 import Starships from '../views/pages/starships';
 import Planets from '../views/pages/planets';
@@ -15,7 +16,7 @@ export const routesWithDetails = {
     fetchData: () => validateData(() => swapiService.getFilms()),
   },
   [routes.film]: {
-    component: People,
+    component: Film,
     fetchData: id => validateData(() => swapiService.getFilm(id)),
   },
   [routes.people]: {

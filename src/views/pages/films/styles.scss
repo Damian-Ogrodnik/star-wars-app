@@ -1,0 +1,14 @@
+.films {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 2rem;
+    justify-content: center;
+    min-height: 90vh;
+}
+
+.film-tile {
+    width: 30rem;
+    padding: 2rem;
+    border: 3px solid black;
+}

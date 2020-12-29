@@ -13,7 +13,7 @@ export class SwapiService {
 
   getFilm(id) {
     return this.HttpService.GET(`${apiRoutes.films}${id}/`)
-      .then(data => data.results)
+      .then(data => data)
       .catch(err => ({error: err.message}));
   }
 

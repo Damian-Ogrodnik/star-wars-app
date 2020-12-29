@@ -1,21 +1,26 @@
 import './styles.scss';
 
+import {routes} from '/src/common/config/variables';
+import {getFormattedUrl} from '/src/common/helpers';
+
 const Films = {
   render: async filmsArray => {
     const films = filmsArray
       .map(
         filmData => `
-      <section>
-       <h1>${filmData.title}</h1>
-      </section>`
+          <section class="film-tile">
+            <h2>${filmData.title}</h2>
+            <p>${filmData.director}</p>
+            <p>${filmData.release_date}</p>
+            <a href="#/${getFormattedUrl(filmData.url)}">Details</a>
+          </section>`
       )
       .join(' ');
 
     console.log(filmsArray);
 
     return `
-            <main>
-                <h2> Films</h2>
+            <main class="films">
                 ${films}
             </main>
         `;
