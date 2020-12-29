@@ -1,10 +1,10 @@
 import 'regenerator-runtime/runtime';
 import './styles.scss';
 
-import { Error404 } from './views/components/Error/Error404';
+import {Error404} from './views/components/Error/Error404';
 import Navbar from './views/components/Navbar';
-import { parseRequestURL, validateData } from './common/helpers';
-import { routesWithDetails } from './core/routes';
+import {parseRequestURL} from './common/helpers';
+import {routesWithDetails} from './core/routes';
 
 const router = async () => {
   const body = null || document.getElementById('navigation');
@@ -15,14 +15,15 @@ const router = async () => {
 
   const request = parseRequestURL();
 
-  const parsedURL = (request.resource ? `/${request.resource}` : '/')
-    + (request.id ? '/:id' : '')
-    + (request.verb ? `/${request.verb}` : '');
+  const parsedURL =
+    (request.resource ? `/${request.resource}` : '/') +
+    (request.id ? '/:id' : '') +
+    (request.verb ? `/${request.verb}` : '');
 
-  if (!routesWithDetails[parsedURL]) return content.innerHTML = await Error404.render();
+  if (!routesWithDetails[parsedURL]) return (content.innerHTML = await Error404.render());
 
-  const { component, fetchData } = routesWithDetails[parsedURL];
-  const data = await fetchData();
+  const {component, fetchData} = routesWithDetails[parsedURL];
+  const data = await fetchData(request.id);
   content.innerHTML = await component.render(data);
   await component.after_render();
 };
