@@ -1,8 +1,3 @@
-import Films from '../../views/pages/films';
-import People from '../../views/pages/people';
-import Starships from '../../views/pages/starships';
-import Planets from '../../views/pages/planets';
-
 export const routes = {
   films: '/',
   film: '/films/:id',
@@ -12,15 +7,4 @@ export const routes = {
   starship: '/starships/:id',
   planets: '/planets',
   planet: '/planets/:id',
-};
-
-export const routesWithComponents = {
-  [routes.films]: Films,
-  [routes.singleFilm]: People,
-  [routes.people]: People,
-  [routes.person]: People,
-  [routes.starships]: Starships,
-  [routes.starship]: Starships,
-  [routes.planets]: Planets,
-  [routes.planet]: Planets,
 };

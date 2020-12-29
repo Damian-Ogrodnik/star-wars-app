@@ -3,8 +3,8 @@ import './styles.scss';
 
 import { Error404 } from './views/components/Error/Error404';
 import Navbar from './views/components/Navbar';
-import { parseRequestURL } from './common/helpers';
-import { routesWithComponents } from './common/config/variables';
+import { parseRequestURL, validateData } from './common/helpers';
+import { routesWithDetails } from './core/routes';
 
 const router = async () => {
   const body = null || document.getElementById('navigation');
@@ -19,9 +19,12 @@ const router = async () => {
     + (request.id ? '/:id' : '')
     + (request.verb ? `/${request.verb}` : '');
 
-  const page = routesWithComponents[parsedURL] ? routesWithComponents[parsedURL] : Error404;
-  content.innerHTML = await page.render();
-  await page.after_render();
+  if (!routesWithDetails[parsedURL]) return content.innerHTML = await Error404.render();
+
+  const { component, fetchData } = routesWithDetails[parsedURL];
+  const data = await fetchData();
+  content.innerHTML = await component.render(data);
+  await component.after_render();
 };
 
 window.addEventListener('hashchange', router);
