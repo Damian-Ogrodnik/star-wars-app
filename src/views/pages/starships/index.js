@@ -1,12 +1,10 @@
-import { parseRequestURL } from '../../../common/helpers';
-
 const Starships = {
-  render: async () => {
-    const request = parseRequestURL();
+  render: async starshipsData => {
+    const starships = starshipsData.map(starshipData => `<h1>${starshipData.name}</h1>`).join(' ');
 
     return /* html */ `
             <section class="section">
-                <h1> Post Id : ${request.id}</h1>
+                <h1> Post Id : ${starships}</h1>
             </section>
         `;
   },

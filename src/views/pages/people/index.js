@@ -1,12 +1,10 @@
-import { parseRequestURL } from '../../../common/helpers';
-
 const People = {
-  render: async () => {
-    const request = parseRequestURL();
+  render: async peopleData => {
+    const people = peopleData.map(peopleData => `<h1>${peopleData.name}</h1>`).join(' ');
 
     return /* html */ `
             <section class="section">
-                <h1> Post Id : ${request.id}</h1>
+                <h1> ${people} </h1>
             </section>
         `;
   },

@@ -1,12 +1,10 @@
-import { parseRequestURL } from '../../../common/helpers';
-
 const Planets = {
-  render: async () => {
-    const request = parseRequestURL();
+  render: async planetsData => {
+    const planets = planetsData.map(planetData => `<h1>${planetData.name}</h1>`).join(' ');
 
     return /* html */ `
             <section class="section">
-                <h1> Post Id : ${request.id}</h1>
+                <h1> Planets : ${planets}</h1>
             </section>
         `;
   },

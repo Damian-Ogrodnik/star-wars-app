@@ -1,0 +1,14 @@
+@import './variables.scss';
+
+* {
+    box-sizing: border-box;
+}
+html, body, #root {
+    height: 100%;
+}
+body {
+    margin: 0;
+    font-family: sans-serif;
+    font-size: $font-normal;
+    background-color: lightgray;
+}

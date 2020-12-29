@@ -1,6 +1,6 @@
 import './styles.scss';
 
-import { routes } from '../../../common/config/variables';
+import {routes} from '../../../common/config/variables';
 
 const Navbar = {
   render: async () => {

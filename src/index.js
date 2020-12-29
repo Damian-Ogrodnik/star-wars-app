@@ -1,5 +1,5 @@
 import 'regenerator-runtime/runtime';
-import './styles.scss';
+import './styles/main.scss';
 
 import {Error404} from './views/components/Error/Error404';
 import Navbar from './views/components/Navbar';

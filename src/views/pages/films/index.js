@@ -1,12 +1,23 @@
+import './styles.scss';
+
 const Films = {
-  render: async (filmsArray) => {
-    const films = filmsArray.map((filmData) => `<h1>${filmData.title}</h1>`).join(' ');
+  render: async filmsArray => {
+    const films = filmsArray
+      .map(
+        filmData => `
+      <section>
+       <h1>${filmData.title}</h1>
+      </section>`
+      )
+      .join(' ');
+
+    console.log(filmsArray);
 
     return `
-            <section class="section">
-                <h1> Films</h1>
+            <main>
+                <h2> Films</h2>
                 ${films}
-            </section>
+            </main>
         `;
   },
   after_render: async () => {},
