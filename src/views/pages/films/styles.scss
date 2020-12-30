@@ -1,3 +1,5 @@
+@import '/src/styles/variables.scss';
+
 .films {
     display: flex;
     flex-wrap: wrap;
@@ -8,9 +10,35 @@
 }
 
 .film-tile {
+    position: relative;
     width: 30rem;
     padding: 2rem;
     color: white;
-    background-color: darkcyan;
-    border: 3px solid black;
+    background-color: $color-background;
+    border-bottom: 1px solid $color-yellow;
+
+    h2 {
+        font-size: $font-big;
+        text-transform: uppercase;
+    }
+
+    a {
+        position: absolute;
+        bottom: 1rem;
+        right: 1rem;
+
+        padding: 0.5rem 1rem;
+        text-transform: uppercase;
+        color: $color-white;
+        background-color: $color-dark-yellow;
+        opacity: 0.80;
+        &:hover {
+           opacity: 1;
+        }
+          
+    }
+
+    p {
+        font-style: italic;
+    }
 }
