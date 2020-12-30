@@ -4,7 +4,7 @@ import {getFormattedUrl} from '/src/common/helpers';
 
 export const Films = {
   render: async filmsArray => {
-    const films = filmsArray
+    const films = filmsArray.results
       .map(
         filmData => `
           <section class="film-tile">

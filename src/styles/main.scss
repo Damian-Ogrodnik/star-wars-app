@@ -1,17 +1,3 @@
 @import './variables.scss';
 @import './common.scss';
 
-
-* {
-    box-sizing: border-box;
-    
-}
-body {
-    min-height: 100vh;
-    margin: 0;
-    font-family: 'Poller One', cursive;
-    font-size: $font-normal;
-    background-image: url("../assets/background.png");
-
-}
-

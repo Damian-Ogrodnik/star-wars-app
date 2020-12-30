@@ -2,7 +2,7 @@ import {getFormattedUrl} from '/src/common/helpers';
 
 export const People = {
   render: async peopleData => {
-    const people = peopleData
+    const people = peopleData.results
       .map(
         personData =>
           `<h1>

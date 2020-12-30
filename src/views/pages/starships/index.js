@@ -2,7 +2,7 @@ import {getFormattedUrl} from '/src/common/helpers';
 
 export const Starships = {
   render: async starshipsData => {
-    const starships = starshipsData
+    const starships = starshipsData.results
       .map(
         starshipData =>
           `<h1>            
