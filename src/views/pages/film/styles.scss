@@ -18,15 +18,7 @@
         a {
             padding: 0.5rem 1rem;
             margin: 1rem;
-            font-size: $font-small;
-            text-transform: uppercase;
-            color: $color-white;
-            background-color: $color-dark-yellow;
-            opacity: 0.8;
-            &:hover {
-               opacity: 1;
-            }
-              
+            font-size: $font-small;             
         }
     }
 }

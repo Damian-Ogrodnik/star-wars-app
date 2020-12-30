@@ -27,3 +27,14 @@ p {
     color: $color-white;  
     text-align: justify;
 }
+
+a {
+    text-transform: uppercase;
+    color: $color-black;
+    background-color: $color-dark-yellow;
+    opacity: 0.8;
+    &:hover {
+       opacity: 1;
+    }
+      
+}

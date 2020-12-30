@@ -13,6 +13,7 @@ nav {
 
   a {
     text-transform: uppercase;
+    background-color: $color-black;
     color: $color-white;
     &:hover {
       color: $color-yellow;
