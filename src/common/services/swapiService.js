@@ -1,4 +1,5 @@
 import {apiRoutes} from '../config/apiConfig';
+import {getFormattedUrl} from '../helpers';
 
 export class SwapiService {
   constructor(HttpService) {
@@ -51,5 +52,15 @@ export class SwapiService {
     return this.HttpService.GET(`${apiRoutes.starships}${id}/`)
       .then(data => data)
       .catch(err => ({error: err.message}));
+  }
+
+  getDataFromUrlArray(arrayOfUrl) {
+    const data = arrayOfUrl.map(url =>
+      this.HttpService.GET(`/${getFormattedUrl(url)}`)
+        .then(data => data)
+        .catch(err => ({error: err.message}))
+    );
+
+    return Promise.all(data).then(data => data);
   }
 }

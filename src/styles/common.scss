@@ -1,0 +1,29 @@
+* {
+    box-sizing: border-box;
+    
+}
+body {
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Poller One', cursive;
+    font-size: $font-normal;
+    background-image: url("../assets/background.png");
+
+}
+
+h1{
+    color: $color-white;
+    font-size: $font-huge;
+    padding: 0rem 0rem 1rem;
+}
+
+h3{
+    color: $color-white;
+    font-size: $font-medium;
+    padding: 1rem 0rem;  
+}
+
+p {
+    color: $color-white;  
+    text-align: justify;
+}

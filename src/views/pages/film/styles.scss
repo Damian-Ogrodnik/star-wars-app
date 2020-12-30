@@ -1,0 +1,32 @@
+@import '/src//styles/variables.scss';
+
+.film {
+    padding: 2rem;
+}
+
+.film-details {
+    display: grid;
+    grid-template-columns: 1fr;
+
+    section {
+        display: flex;
+        flex-wrap: wrap;
+
+        h3{
+            width: 100%;
+        }
+        a {
+            padding: 0.5rem 1rem;
+            margin: 1rem;
+            font-size: $font-small;
+            text-transform: uppercase;
+            color: $color-white;
+            background-color: $color-dark-yellow;
+            opacity: 0.8;
+            &:hover {
+               opacity: 1;
+            }
+              
+        }
+    }
+}
