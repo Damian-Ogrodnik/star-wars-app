@@ -2,11 +2,14 @@ import {routes} from '../common/config/variables';
 
 import {swapiService} from './rootService';
 
-import Films from '../views/pages/films';
+import {Films} from '../views/pages/films';
 import {Film} from '../views/pages/film';
-import People from '../views/pages/people';
-import Starships from '../views/pages/starships';
-import Planets from '../views/pages/planets';
+import {People} from '../views/pages/people';
+import {Person} from '../views/pages/person';
+import {Planets} from '../views/pages/planets';
+import {Planet} from '../views/pages/planet';
+import {Starships} from '../views/pages/starships';
+import {Starship} from '../views/pages/starship';
 
 import {validateData} from '../common/helpers';
 
@@ -24,23 +27,23 @@ export const routesWithDetails = {
     fetchData: () => validateData(() => swapiService.getPeople()),
   },
   [routes.person]: {
-    component: People,
+    component: Person,
     fetchData: id => validateData(() => swapiService.getPerson(id)),
-  },
-  [routes.starships]: {
-    component: Starships,
-    fetchData: () => validateData(() => swapiService.getStarships()),
-  },
-  [routes.starship]: {
-    component: Starships,
-    fetchData: id => validateData(() => swapiService.getStarship(id)),
   },
   [routes.planets]: {
     component: Planets,
     fetchData: () => validateData(() => swapiService.getPlanets()),
   },
   [routes.planet]: {
-    component: Planets,
+    component: Planet,
     fetchData: id => validateData(() => swapiService.getPlanet(id)),
+  },
+  [routes.starships]: {
+    component: Starships,
+    fetchData: () => validateData(() => swapiService.getStarships()),
+  },
+  [routes.starship]: {
+    component: Starship,
+    fetchData: id => validateData(() => swapiService.getStarship(id)),
   },
 };

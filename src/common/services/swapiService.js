@@ -25,7 +25,7 @@ export class SwapiService {
 
   getPerson(id) {
     return this.HttpService.GET(`${apiRoutes.people}${id}/`)
-      .then(data => data.results)
+      .then(data => data)
       .catch(err => ({error: err.message}));
   }
 
@@ -37,7 +37,7 @@ export class SwapiService {
 
   getPlanet(id) {
     return this.HttpService.GET(`${apiRoutes.planets}${id}/`)
-      .then(data => data.results)
+      .then(data => data)
       .catch(err => ({error: err.message}));
   }
 
@@ -49,7 +49,7 @@ export class SwapiService {
 
   getStarship(id) {
     return this.HttpService.GET(`${apiRoutes.starships}${id}/`)
-      .then(data => data.results)
+      .then(data => data)
       .catch(err => ({error: err.message}));
   }
 }

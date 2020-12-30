@@ -1,4 +1,4 @@
-import { httpMethod } from '../config/apiConfig';
+import {httpMethod} from '../config/apiConfig';
 
 export class HttpService {
   constructor(baseUrl) {
@@ -21,7 +21,7 @@ export class HttpService {
       headers,
     };
 
-    return fetch(url, params).then(async (response) => {
+    return fetch(url, params).then(async response => {
       if (response.ok && response.status === 200) {
         return response.json();
       }

@@ -1,6 +1,15 @@
-const Starships = {
+import {getFormattedUrl} from '/src/common/helpers';
+
+export const Starships = {
   render: async starshipsData => {
-    const starships = starshipsData.map(starshipData => `<h1>${starshipData.name}</h1>`).join(' ');
+    const starships = starshipsData
+      .map(
+        starshipData =>
+          `<h1>            
+            <a href="#/${getFormattedUrl(starshipData.url)}">${starshipData.name}</a>
+          </h1>`
+      )
+      .join(' ');
 
     return /* html */ `
             <section class="section">
@@ -10,5 +19,3 @@ const Starships = {
   },
   after_render: async () => {},
 };
-
-export default Starships;

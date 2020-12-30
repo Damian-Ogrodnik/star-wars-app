@@ -1,6 +1,16 @@
-const People = {
+import {getFormattedUrl} from '/src/common/helpers';
+
+export const People = {
   render: async peopleData => {
-    const people = peopleData.map(peopleData => `<h1>${peopleData.name}</h1>`).join(' ');
+    const people = peopleData
+      .map(
+        personData =>
+          `<h1>
+          <a href="#/${getFormattedUrl(personData.url)}">${personData.name}</a>
+          
+          </h1>`
+      )
+      .join(' ');
 
     return /* html */ `
             <section class="section">
@@ -10,5 +20,3 @@ const People = {
   },
   after_render: async () => {},
 };
-
-export default People;

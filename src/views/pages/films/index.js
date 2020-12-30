@@ -1,9 +1,8 @@
 import './styles.scss';
 
-import {routes} from '/src/common/config/variables';
 import {getFormattedUrl} from '/src/common/helpers';
 
-const Films = {
+export const Films = {
   render: async filmsArray => {
     const films = filmsArray
       .map(
@@ -17,8 +16,6 @@ const Films = {
       )
       .join(' ');
 
-    console.log(filmsArray);
-
     return `
             <main class="films">
                 ${films}
@@ -27,5 +24,3 @@ const Films = {
   },
   after_render: async () => {},
 };
-
-export default Films;
