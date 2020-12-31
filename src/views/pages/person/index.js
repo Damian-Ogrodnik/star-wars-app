@@ -8,9 +8,9 @@ export const Person = {
     const filmsData = await swapiService.getDataFromUrlArray(personData.films);
 
     return `
-      <main class="person">
+      <main class="page-wrapper">
         <h1>${personData.name}</h1>
-        <section class="person-details">
+        <section class="page-details">
           <p>Height: ${personData.height}</p>
           <p>Weight: ${personData.mass}</p>
           <p>Gender: ${personData.gender}</p>
@@ -18,7 +18,7 @@ export const Person = {
           <p>Eye color: ${personData.eye_color}</p>
           <p>Skin color: ${personData.skin_color}</p>
         </section>
-        <section class="person-movies">
+        <section class="page-movies">
           <h3>Movies</h3>
           ${generateLinksFromArray(filmsData, 'title')}
       </section>

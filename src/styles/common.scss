@@ -38,3 +38,29 @@ a {
     }
       
 }
+
+.page-wrapper {
+    padding: 2rem;
+}
+
+.page-details{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.page-movies {
+    display: flex;
+    flex-wrap: wrap;
+
+    h3{
+        font-size: $font-big;
+        margin-top: 2rem;
+        width: 100%;
+    }
+    a {
+        padding: 0.5rem 1rem;
+        margin: 1rem;
+        font-size: $font-small;             
+    }
+}
