@@ -1,5 +1,3 @@
-import './styles.scss';
-
 import {getFormattedUrl} from '/src/common/helpers';
 
 export const Films = {
@@ -7,7 +5,7 @@ export const Films = {
     const films = filmsArray.results
       .map(
         filmData => `
-          <section class="film-tile">
+          <section class="tile">
             <h2>${filmData.title}</h2>
             <p>${filmData.director}</p>
             <p>${filmData.release_date}</p>
@@ -17,7 +15,7 @@ export const Films = {
       .join(' ');
 
     return `
-            <main class="films">
+            <main class="tiles-wrapper">
                 ${films}
             </main>
         `;

@@ -64,3 +64,38 @@ a {
         font-size: $font-small;             
     }
 }
+
+.tiles-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 2rem;
+    justify-content: center;
+    min-height: 90vh;
+}
+
+
+.tile {
+    position: relative;
+    width: 30rem;
+    padding:  1rem 1.5rem;
+    color: $color-white;
+    background-color: $color-background;
+    border-bottom: 1px solid $color-yellow;
+
+    h2 {
+        font-size: $font-big;
+        text-transform: uppercase;
+    }
+
+    a {
+        position: absolute;
+        bottom: 1rem;
+        right: 1rem;
+        padding: 0.5rem 1rem;          
+    }
+
+    p {
+        font-style: italic;
+    }
+}
