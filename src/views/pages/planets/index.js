@@ -4,17 +4,18 @@ export const Planets = {
   render: async planetsData => {
     const planets = planetsData.results
       .map(
-        planetData =>
-          `<h1>
-            <a href="#/${getFormattedUrl(planetData.url)}">${planetData.name}</a>
-          </h1>`
+        planetData => `
+        <section class="tile">
+          <h2>${planetData.name}</h2>
+          <a href="#/${getFormattedUrl(planetData.url)}">Details</a>
+        </section>`
       )
       .join(' ');
 
-    return /* html */ `
-            <section class="section">
-                <h1> Planets : ${planets}</h1>
-            </section>
+    return `
+            <main class="tiles-wrapper">
+                ${planets}
+            </main>
         `;
   },
   after_render: async () => {},

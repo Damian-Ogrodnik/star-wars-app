@@ -4,18 +4,18 @@ export const People = {
   render: async peopleData => {
     const people = peopleData.results
       .map(
-        personData =>
-          `<h1>
-          <a href="#/${getFormattedUrl(personData.url)}">${personData.name}</a>
-          
-          </h1>`
+        personData => `
+        <section class="tile">
+          <h2>${personData.name}</h2>
+          <a href="#/${getFormattedUrl(personData.url)}">Details</a>
+        </section>`
       )
       .join(' ');
 
-    return /* html */ `
-            <section class="section">
-                <h1> ${people} </h1>
-            </section>
+    return `
+            <main class="tiles-wrapper">
+                ${people}
+            </main>
         `;
   },
   after_render: async () => {},

@@ -31,6 +31,7 @@ p {
 a {
     text-transform: uppercase;
     color: $color-black;
+    text-decoration: none;
     background-color: $color-dark-yellow;
     opacity: 0.8;
     &:hover {
