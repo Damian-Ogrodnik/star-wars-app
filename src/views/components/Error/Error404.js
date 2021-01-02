@@ -1,6 +1,6 @@
 export const Error404 = {
   render: async () => {
-    const view = /* html */ `
+    const view = `
             <section class="section">
                 <h1> 404 Error </h1>
             </section>

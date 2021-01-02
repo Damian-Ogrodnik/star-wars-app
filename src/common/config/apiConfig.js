@@ -5,7 +5,6 @@ export const apiRoutes = {
   people: '/people/',
   planets: '/planets/',
   starships: '/starships/',
-
 };
 
 export const httpMethod = {
