@@ -5,7 +5,7 @@ import Spinner from '../../../assets/spinner.svg';
 export const Loader = {
   render: async () => {
     const view = `
-              <section class="loader">
+              <section id="loader" class="loader">
                   ${Spinner}
               </section>
           `;

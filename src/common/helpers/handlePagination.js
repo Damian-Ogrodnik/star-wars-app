@@ -1,5 +1,7 @@
 import {swapiService} from '/src/core/rootService';
 import {getFormattedUrl} from '/src/common/helpers';
+import {Loader} from '/src/views/components/loader';
+
 import {generateTiles} from './generateTiles';
 
 export const handlePagination = (data, tileType) => {
@@ -27,9 +29,14 @@ const handleScroll = async (data, tileType) => {
 
 const fetchNextTiles = async (data, tileType) => {
   const container = document.getElementsByClassName('tiles-wrapper')[0];
+  container.innerHTML += await Loader.render();
+
   const fetchedData = await swapiService.getData(`/${getFormattedUrl(data.next)}`);
 
   const tiles = generateTiles(fetchedData, tileType);
+
+  const loader = document.getElementById('loader');
+  loader.remove();
 
   container.innerHTML += tiles;
 
