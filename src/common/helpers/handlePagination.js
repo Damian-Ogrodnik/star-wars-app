@@ -1,6 +1,6 @@
 import {swapiService} from '/src/core/rootService';
 import {getFormattedUrl} from '/src/common/helpers';
-import {Loader} from '/src/views/components/loader';
+import {Loader} from '/src/views/components/Loader';
 
 import {generateTiles} from './generateTiles';
 

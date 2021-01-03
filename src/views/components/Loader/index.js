@@ -1,6 +1,6 @@
 import './styles.scss';
 
-import Spinner from '../../../assets/spinner.svg';
+import Spinner from '/src/assets/spinner.svg';
 
 export const Loader = {
   render: async () => {

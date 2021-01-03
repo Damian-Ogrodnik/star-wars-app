@@ -2,18 +2,22 @@
 @import '/src/styles/mixins.scss';
 
 nav {
+  position: sticky;
+  top:0;
+  left:0;
+  z-index: 10;
   background-color: $color-black;
   border-bottom: 3px solid $color-white;
-  padding: 1rem;
+  padding: 0.25rem;
 
   ul {
     display: flex;
     justify-content: flex-end;
     width: 100%;
-
-    @include respond-to('small') {
+    @include respond-to('extraSmall') {
       display: grid;
       grid-template-columns: 1fr;
+      padding: 0;
      }
   }
 
@@ -25,5 +29,9 @@ nav {
     &:hover {
       color: $color-yellow;
     }
+  }
+  @include respond-to('extraSmall') {
+    width: 100%;
+    text-align: center;
   }
 }
