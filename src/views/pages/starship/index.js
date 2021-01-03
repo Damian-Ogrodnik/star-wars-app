@@ -7,7 +7,7 @@ export const Starship = {
 
     return `
         <main class="page-wrapper">
-        <h1>${starshipData.name}</h1>
+          <h1>${starshipData.name}</h1>
           <section class="page-details">
             <p>Cargo capacity: ${starshipData.cargo_capacity}</p>
             <p>Cost in credits: ${starshipData.cost_in_credits}</p>
