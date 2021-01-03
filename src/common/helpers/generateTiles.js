@@ -20,11 +20,15 @@ const tileTypeTemplates = {
   [tileTypes.planets]: planetData => `
     <section class="tile">
       <h2>${planetData.name}</h2>
+      <p>Population: ${planetData.population}</p>
+      <p>Climate: ${planetData.climate}</p>
       <a href="#/${getFormattedUrl(planetData.url)}">Details</a>
     </section>`,
   [tileTypes.starships]: starshipData => `
     <section class="tile">
       <h2>${starshipData.name}</h2>
+      <p>Cost: ${starshipData.cost_in_credits}</p>
+      <p>Crew: ${starshipData.crew}</p>
       <a href="#/${getFormattedUrl(starshipData.url)}">Details</a>
     </section>`,
 };

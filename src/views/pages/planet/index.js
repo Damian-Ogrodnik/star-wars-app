@@ -3,7 +3,7 @@ import {generateLinksFromArray} from '/src/common/helpers';
 
 export const Planet = {
   render: async planetData => {
-    const filmsData = await swapiService.getDataFromUrlArray(planetData.films);
+    const planetUrls = await swapiService.getDataFromUrlArray(planetData.films);
 
     return `
         <main class="page-wrapper">
@@ -18,7 +18,7 @@ export const Planet = {
           </section>
           <section class="page-movies">
             <h3>Movies</h3>
-            ${generateLinksFromArray(filmsData, 'title')}
+            ${generateLinksFromArray(planetUrls, 'title')}
           </section>
         </main>
             `;

@@ -3,7 +3,6 @@ import {generateLinksFromArray} from '/src/common/helpers';
 
 export const Starship = {
   render: async starshipData => {
-    console.log(starshipData);
     const filmsData = await swapiService.getDataFromUrlArray(starshipData.films);
 
     return `
