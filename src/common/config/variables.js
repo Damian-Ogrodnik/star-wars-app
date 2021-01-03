@@ -8,3 +8,10 @@ export const routes = {
   planets: '/planets',
   planet: '/planets/:id',
 };
+
+export const tileTypes = {
+  films: 'films',
+  people: 'people',
+  planets: 'planets',
+  starships: 'starships',
+};

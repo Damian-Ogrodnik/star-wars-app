@@ -28,7 +28,7 @@ const router = async () => {
   const {component, fetchData} = routesWithDetails[parsedURL];
   const data = await fetchData(request.id);
   content.innerHTML = await component.render(data);
-  await component.after_render();
+  await component.after_render(data);
 };
 
 window.addEventListener('hashchange', router);

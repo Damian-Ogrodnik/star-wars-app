@@ -1,18 +1,9 @@
-import {getFormattedUrl} from '/src/common/helpers';
+import {generateTiles, handlePagination} from '/src/common/helpers';
+import {tileTypes} from '/src/common/config/variables';
 
 export const Films = {
   render: async filmsArray => {
-    const films = filmsArray.results
-      .map(
-        filmData => `
-          <section class="tile">
-            <h2>${filmData.title}</h2>
-            <p>${filmData.director}</p>
-            <p>${filmData.release_date}</p>
-            <a href="#/${getFormattedUrl(filmData.url)}">Details</a>
-          </section>`
-      )
-      .join(' ');
+    const films = generateTiles(filmsArray, tileTypes.films);
 
     return `
             <main class="tiles-wrapper">

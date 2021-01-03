@@ -1,16 +1,9 @@
-import {getFormattedUrl} from '/src/common/helpers';
+import {generateTiles, handlePagination} from '/src/common/helpers';
+import {tileTypes} from '/src/common/config/variables';
 
 export const People = {
   render: async peopleData => {
-    const people = peopleData.results
-      .map(
-        personData => `
-        <section class="tile">
-          <h2>${personData.name}</h2>
-          <a href="#/${getFormattedUrl(personData.url)}">Details</a>
-        </section>`
-      )
-      .join(' ');
+    const people = generateTiles(peopleData, tileTypes.people);
 
     return `
             <main class="tiles-wrapper">
@@ -18,5 +11,8 @@ export const People = {
             </main>
         `;
   },
-  after_render: async () => {},
+
+  after_render: async peopleData => {
+    handlePagination(peopleData, tileTypes.people);
+  },
 };

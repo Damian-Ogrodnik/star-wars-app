@@ -1,4 +1,3 @@
-import {apiRoutes} from '../config/apiConfig';
 import {getFormattedUrl} from '../helpers';
 
 export class SwapiService {

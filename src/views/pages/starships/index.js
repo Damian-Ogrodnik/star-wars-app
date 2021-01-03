@@ -1,17 +1,9 @@
-import {getFormattedUrl} from '/src/common/helpers';
+import {generateTiles, handlePagination} from '/src/common/helpers';
+import {tileTypes} from '/src/common/config/variables';
 
 export const Starships = {
   render: async starshipsData => {
-    const starships = starshipsData.results
-      .map(
-        starshipData => `
-        <section class="tile">
-          <h2>${starshipData.name}</h2>
-          <a href="#/${getFormattedUrl(starshipData.url)}">Details</a>
-        </section>
-        `
-      )
-      .join(' ');
+    const starships = generateTiles(starshipsData, tileTypes.starships);
 
     return `
             <main class="tiles-wrapper">
@@ -19,5 +11,7 @@ export const Starships = {
             </main>
         `;
   },
-  after_render: async () => {},
+  after_render: async starshipsData => {
+    handlePagination(starshipsData, tileTypes.starships);
+  },
 };
