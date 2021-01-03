@@ -8,13 +8,14 @@ const tileTypeTemplates = {
   [tileTypes.films]: filmData => `
     <section class="tile">
       <h2>${filmData.title}</h2>
-      <p>${filmData.director}</p>
-      <p>${filmData.release_date}</p>
+      <p>Director: ${filmData.director}</p>
+      <p>Release: ${filmData.release_date}</p>
       <a href="#/${getFormattedUrl(filmData.url)}">Details</a>
     </section>`,
   [tileTypes.people]: personData => `
     <section class="tile">
       <h2>${personData.name}</h2>
+      <p>Birth year: ${personData.birth_year}</p>
       <a href="#/${getFormattedUrl(personData.url)}">Details</a>
     </section>`,
   [tileTypes.planets]: planetData => `
