@@ -25,5 +25,5 @@ export const router = async () => {
   const {component, fetchData, tileType, isPaginationAvailable} = routesWithDetails[parsedURL];
   const data = await fetchData(request.id);
   content.innerHTML = await component.render(data, tileType);
-  await component.after_render(data, isPaginationAvailable);
+  await component.after_render(data, tileType, isPaginationAvailable);
 };

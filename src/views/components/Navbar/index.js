@@ -1,10 +1,12 @@
 import './styles.scss';
 
+import Logo from '/src/assets/logo.svg';
 import {routes} from '/src/common/config/variables';
 
 export const Navbar = {
   render: async () => {
     const view = `
+    ${Logo}
     <ul>
         <li><a href="#${routes.films}">Films</a></li>
         <li><a href="#${routes.people}">People</a></li>

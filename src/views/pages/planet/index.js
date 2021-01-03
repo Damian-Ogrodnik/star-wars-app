@@ -7,7 +7,7 @@ export const Planet = {
 
     return `
         <main class="page-wrapper">
-        <h1>${planetData.name}</h1>
+          <h1>${planetData.name}</h1>
           <section class="page-details">
             <p>Climate: ${planetData.climate}</p>
             <p>Terrain: ${planetData.terrain}</p>

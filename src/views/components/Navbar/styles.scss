@@ -6,6 +6,9 @@ nav {
   top:0;
   left:0;
   z-index: 10;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
   background-color: $color-black;
   border-bottom: 3px solid $color-white;
   padding: 0.25rem;
@@ -14,10 +17,12 @@ nav {
     display: flex;
     justify-content: flex-end;
     width: 100%;
+    margin-right: 2rem;
     @include respond-to('extraSmall') {
       display: grid;
       grid-template-columns: 1fr;
       padding: 0;
+      margin: 0.25rem 0rem;
      }
   }
 
@@ -33,5 +38,15 @@ nav {
   @include respond-to('extraSmall') {
     width: 100%;
     text-align: center;
+  }
+}
+
+.logo{
+  margin: 0.75rem 0.75rem 0.75rem 2rem;
+  width: 2.5rem;
+  height: 2.5rem;
+
+  @include respond-to('extraSmall') {
+    display: none;
   }
 }
