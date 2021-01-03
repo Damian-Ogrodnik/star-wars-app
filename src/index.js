@@ -3,7 +3,7 @@ import './styles/main.scss';
 
 import {Error404} from './views/components/Error/Error404';
 import {Loader} from './views/components/Loader';
-import Navbar from './views/components/Navbar';
+import {Navbar} from './views/components/Navbar';
 import {parseRequestURL} from './common/helpers';
 import {routesWithDetails} from './core/routes';
 

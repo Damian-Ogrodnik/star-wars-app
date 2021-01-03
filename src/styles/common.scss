@@ -1,3 +1,5 @@
+@import '/src/styles/mixins.scss';
+
 * {
     box-sizing: border-box;
     
@@ -48,6 +50,10 @@ a {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
+
+    @include respond-to('small') {
+        grid-template-columns: 1fr;
+    }
 }
 
 .page-movies {
@@ -73,6 +79,10 @@ a {
     padding: 2rem;
     justify-content: center;
     min-height: 90vh;
+
+    @include respond-to('small') {
+        padding: 2rem 1rem;
+    }
 }
 
 
@@ -84,6 +94,13 @@ a {
     background-color: $color-background;
     border-bottom: 1px solid $color-yellow;
 
+    @include respond-to('small') {
+       margin: 1rem 0rem;
+       display: flex;
+       flex-direction: column;
+       align-items: flex-start;
+    }
+
     h2 {
         font-size: $font-big;
         text-transform: uppercase;
@@ -93,10 +110,16 @@ a {
         position: absolute;
         bottom: 1rem;
         right: 1rem;
-        padding: 0.5rem 1rem;          
+        padding: 0.5rem 1rem;
+        
+        @include respond-to('small') {
+            position: static;
+        }  
     }
 
     p {
         font-style: italic;
     }
+
+  
 }

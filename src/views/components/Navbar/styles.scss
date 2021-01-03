@@ -1,4 +1,5 @@
 @import '/src/styles/variables.scss';
+@import '/src/styles/mixins.scss';
 
 nav {
   background-color: $color-black;
@@ -7,11 +8,17 @@ nav {
 
   ul {
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-end;
     width: 100%;
+
+    @include respond-to('small') {
+      display: grid;
+      grid-template-columns: 1fr;
+     }
   }
 
   a {
+    padding: 0 1rem;
     text-transform: uppercase;
     background-color: $color-black;
     color: $color-white;

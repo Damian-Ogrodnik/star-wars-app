@@ -1,8 +1,8 @@
 import './styles.scss';
 
-import {routes} from '../../../common/config/variables';
+import {routes} from '/src/common/config/variables';
 
-const Navbar = {
+export const Navbar = {
   render: async () => {
     const view = `
     <ul>
@@ -16,5 +16,3 @@ const Navbar = {
   },
   after_render: async () => {},
 };
-
-export default Navbar;
