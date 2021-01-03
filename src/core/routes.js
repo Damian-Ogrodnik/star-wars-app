@@ -1,6 +1,6 @@
 import {routes} from '../common/config/variables';
 import {apiRoutes} from '../common/config/apiConfig';
-
+import {validateData} from '../common/helpers';
 import {swapiService} from './rootService';
 
 import {Films} from '../views/pages/films';
@@ -11,8 +11,6 @@ import {Planets} from '../views/pages/planets';
 import {Planet} from '../views/pages/planet';
 import {Starships} from '../views/pages/starships';
 import {Starship} from '../views/pages/starship';
-
-import {validateData} from '../common/helpers';
 
 export const routesWithDetails = {
   [routes.films]: {
